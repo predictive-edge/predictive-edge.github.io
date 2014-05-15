@@ -1,0 +1,17 @@
+- title: Installation and Setup
+  url: /docs/installation/
+  children:
+    - title: Installing the Tag
+      url: /docs/installation/tag
+    - title: Data and Revenue Integration
+      url: /docs/installation/data
+
+- title: OmniTag Specification
+  url: /docs/datatracking/
+  children:
+    - title: User Object
+      url: /docs/datatracking/user
+    - title: Page Object
+      url: /docs/datatracking/page
+    - title: Transaction Object
+      url: /docs/datatracking/trans

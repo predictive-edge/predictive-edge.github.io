@@ -65,6 +65,6 @@ window.__pe_omnitag = {
 Not all of this data needs to be supplied - for example, you can provide only
 a `transaction` object, or only a `user` object.
 
-A detailed specification of the OmniTag specification can be found
+A detailed specification of the OmniTag can be found
 [here](/docs/datatracking).
 

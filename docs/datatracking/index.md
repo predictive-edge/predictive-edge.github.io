@@ -13,6 +13,7 @@ The fields of the OmniTag are as follows:
 | user        | [User Object](/docs/datatracking/user)         | Information associated with this particular user |
 | page        | [Page Object](/docs/datatracking/page)         | Information associated with this particular page |
 | transaction | [Transaction Object](/docs/datatracking/trans) | If the user has just completed a transaction, then the contents of that transaction. Should only be used on a confirmation page |
+| version     | String | The version number of the OmniTag. Should be `1.0.0`. |
 
 Not all the fields are required. For example, you can specify only a `user`
 and not a `page`, which would allow you to perform user-related targeting but
@@ -43,8 +44,6 @@ window.__pe_omnitag = {
         "currency": "USD", //ISO 4217 code
         "subtotal": 123.00,
         "subtotal_include_tax": true,
-        "voucher": "MYVOUCHER",
-        "voucher_discount": 0.00,
         "tax": 10.00,
         "shipping_cost": 1.00,
         "shipping_method": "Standard Mail",
@@ -52,27 +51,31 @@ window.__pe_omnitag = {
 
         "delivery": {
             "name": "Full Name",
-            "address": "234 High Street",
-            "city": "London",
-            "state": "London",
-            "postcode": "SW1 1AB",
-            "country": "GB"
+            "address": "1141 Elderberry Cir",
+            "city": "Folsom",
+            "state": "CA",
+            "postcode": "95630",
+            "country": "US"
         },
         "billing": {
             "name": "Full Name",
-            "address": "234 High Street",
-            "city": "London",
-            "state": "London",
-            "postcode": "SW1 1AB",
-            "country": "GB"
+            "address": "1141 Elderberry Cir",
+            "city": "Folsom",
+            "state": "CA",
+            "postcode": "95630",
+            "country": "US"
         },
         "line_items": [{
-            "product": Product //mandatory
+            "product": "Product1", //mandatory
             "quantity": 1, //mandatory
             "subtotal": 30.00,
             "total_discount": 5.00
-        }, LineItem, LineItem, ...]
+        },{
+            "product": "Product2", //mandatory
+            "quantity": 2, //mandatory
+            "subtotal": 14.00,
+        }]
     },
-    "version": "1.0.0" //OmniTag version number.
+    "version": "1.0.0" //OmniTag version number, should be 1.0.0.
 };
 {% endhighlight %}

@@ -198,17 +198,19 @@ ul.nav > li > a:hover {
 /* Post styles */
 /* ----------------------------------------------------------*/
 
+.post-content table tr td:not(:first-child), .post-content table thead th:not(:first-child) {
+  padding-left: 10px;
+}
+
 .post-content table tr td:first-child {
   font-weight: bold;
 }
 
 .post-content table tr td:nth-last-child(2) {
   font-style: italic;
-  padding-left: 10px;
 }
 
 .post-content table tr td:last-child {
-  padding-left: 10px;
 }
 
 .post-header { margin: 10px 0 30px; }
